@@ -25,5 +25,5 @@
 pytest test.py
 ```
 Якщо ти отримав повідомлення:
-![Screenshot 2023-10-08 at 12.29.54.png](..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fqs%2Flwkzs9cx1c99chn69rtkyt_w0000gp%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_vGgdR1%2FScreenshot%202023-10-08%20at%2012.29.54.png)
+![success.png](success.png)
 Можеш зберігати та відправляти своє рішення, як в інструкції. Якщо хоч один тест не пройшов, в тебе помилка в коді, будь ласка виправ її.
