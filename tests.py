@@ -2,12 +2,21 @@ import subprocess
 
 
 def test_valid_username():
-    input_text = "user123\n"
+    input_text = "123\n"
     process = subprocess.Popen(["python", "main.py"], stdin=subprocess.PIPE, stdout=subprocess.PIPE,
                                stderr=subprocess.PIPE, text=True)
     stdout, stderr = process.communicate(input=input_text)
 
-    assert "Username is valid" in stdout, "Password 'user123' must be valid"
+    assert "Username is valid" in stdout, "Password '123' must be valid"
+
+
+def test_valid_long_username():
+    input_text = "123456789101112\n"
+    process = subprocess.Popen(["python", "main.py"], stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                               stderr=subprocess.PIPE, text=True)
+    stdout, stderr = process.communicate(input=input_text)
+
+    assert "Username is valid" in stdout, "Password '123456789101112' must be valid"
 
 
 def test_short_username():
@@ -20,7 +29,7 @@ def test_short_username():
 
 
 def test_long_username():
-    input_text = "someveryverylongusername\n"
+    input_text = "someverylonguser\n"
     process = subprocess.Popen(["python", "main.py"], stdin=subprocess.PIPE, stdout=subprocess.PIPE,
                                stderr=subprocess.PIPE, text=True)
     stdout, stderr = process.communicate(input=input_text)
